@@ -15,7 +15,7 @@ namespace JwtAuthenticationManager
     public class JwtTokenHandler
     {
         public const string JWT_SECURITY_KEY = "yPkCqn4kSWLtaJwXvN2jGzQRyTZ3gdXkt7FeBJP";
-        private const int JWT_TOKEN_VALIDITY_MINS = 20;
+        private const int JWT_TOKEN_VALIDITY_MINS = 60;
 
         
         public JwtTokenHandler()
