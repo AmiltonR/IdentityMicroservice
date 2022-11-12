@@ -28,7 +28,7 @@ namespace Identity.API.Controllers
 
             try
             {
-                var userAccount = _ctx.Usuarios.Where(x => x.Carnet == authenticationRequest.Carnet && EF.Functions.Collate(x.Clave, "SQL_Latin1_General_CP1_CS_AS") == authenticationRequest.Clave).FirstOrDefault();
+                var userAccount = _ctx.Usuarios.Where(x => x.Carnet == authenticationRequest.Carnet && EF.Functions.Collate(x.Clave, "SQL_Latin1_General_CP1_CS_AS") == authenticationRequest.Clave && x.estado == 1).FirstOrDefault();
                 //
                 if (userAccount == null) return NotFound();
 
